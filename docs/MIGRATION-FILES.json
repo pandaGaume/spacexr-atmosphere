@@ -1,0 +1,389 @@
+{
+  "sourceCommit": "bde5efe",
+  "files": [
+    {
+      "path": "benchmark-results.json",
+      "sourceSha256": "a475156a78578a56482766a05abd8d43829466767575da81c1fae01ab8d4bfff",
+      "targetSha256": "a475156a78578a56482766a05abd8d43829466767575da81c1fae01ab8d4bfff",
+      "state": "identical"
+    },
+    {
+      "path": "benchmark.js",
+      "sourceSha256": "92a5b3d85ddf356c5c16769428cd5c7320acf6c2062a488cb44769547251a66b",
+      "targetSha256": "92a5b3d85ddf356c5c16769428cd5c7320acf6c2062a488cb44769547251a66b",
+      "state": "identical"
+    },
+    {
+      "path": "continuity-results.json",
+      "sourceSha256": "a33e66b9e95eae6146f7476d6f624a169eef8ea8c2142fdaa70def5b8da4d6d4",
+      "targetSha256": "a33e66b9e95eae6146f7476d6f624a169eef8ea8c2142fdaa70def5b8da4d6d4",
+      "state": "identical"
+    },
+    {
+      "path": "continuity.js",
+      "sourceSha256": "35390cbcab755280c7732460517f055ca3758ffdfc6ecf09cb32d4a98d253c94",
+      "targetSha256": "35390cbcab755280c7732460517f055ca3758ffdfc6ecf09cb32d4a98d253c94",
+      "state": "identical"
+    },
+    {
+      "path": "demo.js",
+      "sourceSha256": "784942a2d22e336bcf7001b53d1ffda91f5c6f0a3af9f848b9127a0fb4a3f6ad",
+      "targetSha256": "0500215ab00ee155f02e7c4251307cc619bc3ea26f86afde3ee9c558741e5666",
+      "state": "adapted"
+    },
+    {
+      "path": "existing-work.md",
+      "sourceSha256": "098ef7aa35184c1c5db68bbff50462939d33a73d2dbea1638f4e6e045135d70c",
+      "targetSha256": "098ef7aa35184c1c5db68bbff50462939d33a73d2dbea1638f4e6e045135d70c",
+      "state": "identical"
+    },
+    {
+      "path": "hybrid-benchmark-results.json",
+      "sourceSha256": "e03bca82f1b0ea35ffa51ff930dbf6beabee1ae9b6403e0f6118d9c3ce01ab5b",
+      "targetSha256": "e03bca82f1b0ea35ffa51ff930dbf6beabee1ae9b6403e0f6118d9c3ce01ab5b",
+      "state": "identical"
+    },
+    {
+      "path": "hybrid-benchmark.js",
+      "sourceSha256": "5c64fe97f3631ab3eb44955ffa291233eb32690676043b04c602bd5b4446426c",
+      "targetSha256": "5c64fe97f3631ab3eb44955ffa291233eb32690676043b04c602bd5b4446426c",
+      "state": "identical"
+    },
+    {
+      "path": "hybrid-webgpu-validation.json",
+      "sourceSha256": "998ee259b0e2a4b12d4160e41f3fe77d2d99209ed93314259f6a8c283072e141",
+      "targetSha256": "998ee259b0e2a4b12d4160e41f3fe77d2d99209ed93314259f6a8c283072e141",
+      "state": "identical"
+    },
+    {
+      "path": "HYBRID.md",
+      "sourceSha256": "3129e55bfd6b5c1bf1a720896793ae30366b7ab2419214522b7c8b682ba39f9a",
+      "targetSha256": "3129e55bfd6b5c1bf1a720896793ae30366b7ab2419214522b7c8b682ba39f9a",
+      "state": "identical"
+    },
+    {
+      "path": "index.html",
+      "sourceSha256": "963267f8187f023ad52fa1627cb5a57f441ea31e53da70abbebf07d348024140",
+      "targetSha256": "3f151c20e59136a604cc6a8cfe7e20bfff3b05b124000000bb91535d3641b223",
+      "state": "adapted"
+    },
+    {
+      "path": "mie-reference.py",
+      "sourceSha256": "07bbbc004aa1352e5161bf79d5687358fbe26b15a7cd5351dc74600c28fcabc3",
+      "targetSha256": "07bbbc004aa1352e5161bf79d5687358fbe26b15a7cd5351dc74600c28fcabc3",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/earth-spectral-48.json",
+      "sourceSha256": "466c429348d473ed0664a65a01cd32c3f42391b1d032ce5e1089aa59486eb2c6",
+      "targetSha256": "466c429348d473ed0664a65a01cd32c3f42391b1d032ce5e1089aa59486eb2c6",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/earth-spectral-fov20.png",
+      "sourceSha256": "93dbeb2d1faeff979204c4821f1406f27c75b44103af8c41fa64cfb7cf549a15",
+      "targetSha256": "93dbeb2d1faeff979204c4821f1406f27c75b44103af8c41fa64cfb7cf549a15",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-spectral-24.json",
+      "sourceSha256": "c300460312b944d97a6073d93525e1bc253ca7365db4d9269b6b1908cf7d3fec",
+      "targetSha256": "c300460312b944d97a6073d93525e1bc253ca7365db4d9269b6b1908cf7d3fec",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-spectral-24.png",
+      "sourceSha256": "883279bf729c0598a2d7799dd7ac3a6fcca92e7518876774974fcb5770d0350d",
+      "targetSha256": "883279bf729c0598a2d7799dd7ac3a6fcca92e7518876774974fcb5770d0350d",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-spectral-48.json",
+      "sourceSha256": "49e33abbfd020c70cb94beb427a9e976253182beda7a8f1cf8ca6bb47b434ffb",
+      "targetSha256": "49e33abbfd020c70cb94beb427a9e976253182beda7a8f1cf8ca6bb47b434ffb",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-spectral-band-550nm.json",
+      "sourceSha256": "e4e7439dda05c0cef38d05f547367998e2cc151ba434027c4ee2df6398fd7dda",
+      "targetSha256": "e4e7439dda05c0cef38d05f547367998e2cc151ba434027c4ee2df6398fd7dda",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-spectral-band-550nm.png",
+      "sourceSha256": "dc8849c55fef5641307858be611415dd716afe6a1bfaf8e3dd1f8976dda1f080",
+      "targetSha256": "dc8849c55fef5641307858be611415dd716afe6a1bfaf8e3dd1f8976dda1f080",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/mars-twilight.json",
+      "sourceSha256": "a1a8cbb19de3c8ed10fa603022461c0650633b64c4fcd7b5c026adf013dedec9",
+      "targetSha256": "a1a8cbb19de3c8ed10fa603022461c0650633b64c4fcd7b5c026adf013dedec9",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/sky-view-full-hd-report.json",
+      "sourceSha256": "ac4c192a1a4747f44a7c89337388e32ebf0d980b57b25b41cbe28acc717001cc",
+      "targetSha256": "ac4c192a1a4747f44a7c89337388e32ebf0d980b57b25b41cbe28acc717001cc",
+      "state": "identical"
+    },
+    {
+      "path": "outputs/sky-view-full-hd.png",
+      "sourceSha256": "bb573b4d9f49ca7a914f3abe9f7dcf26bedf611b8ad8dda0a4793cbcef45b40e",
+      "targetSha256": "bb573b4d9f49ca7a914f3abe9f7dcf26bedf611b8ad8dda0a4793cbcef45b40e",
+      "state": "identical"
+    },
+    {
+      "path": "package.json",
+      "sourceSha256": "488297383e7cefd3682aa869c4fe235d9ecde9055e3d7bfbc35296ce2d218a34",
+      "targetSha256": "792960cab8f2f3c3e9fbbe910c140d4cc7ea450038670cca24c17cad15260c91",
+      "state": "adapted"
+    },
+    {
+      "path": "README.md",
+      "sourceSha256": "8a78d418e9cff699af4f1b7884045efb735f583ca2918d9903181b461a43130c",
+      "targetSha256": "ca823c48d6dab74ea304affdd86966b9923b7affbff5b367ba423a862157842f",
+      "state": "adapted"
+    },
+    {
+      "path": "references/mars-rover-sunset-user.png",
+      "sourceSha256": "b20821be5acd66d043ac54040f2e2f03678f4083012a4b591380ab0d3625264c",
+      "targetSha256": "b20821be5acd66d043ac54040f2e2f03678f4083012a4b591380ab0d3625264c",
+      "state": "identical"
+    },
+    {
+      "path": "references/visual-target.png",
+      "sourceSha256": "07b4d9aff3bcd2d3645d8184cd20e556e365116c833d00e95c4c0f32dac941fb",
+      "targetSha256": "07b4d9aff3bcd2d3645d8184cd20e556e365116c833d00e95c4c0f32dac941fb",
+      "state": "identical"
+    },
+    {
+      "path": "serve.js",
+      "sourceSha256": "ef4ef6d4f92f82cff3ae847312bc4f34a0ce009cdb0617ed243f099aba43f9ca",
+      "targetSha256": "fe6a0ba7076ed34479893763afa3bc51a9a7d5523cefc7ab66080efa59d496b9",
+      "state": "adapted"
+    },
+    {
+      "path": "SKY-VIEW.md",
+      "sourceSha256": "0586fd9fa30bb182c3bcf26400bd19443f0e380bd6926b706f001a73434343c1",
+      "targetSha256": "0586fd9fa30bb182c3bcf26400bd19443f0e380bd6926b706f001a73434343c1",
+      "state": "identical"
+    },
+    {
+      "path": "solar-lut-benchmark-results.json",
+      "sourceSha256": "6e672db41bd86c6dc20a7acc5f5656b4d3e13671958eb0a07e9de9a73ddeb1d4",
+      "targetSha256": "6e672db41bd86c6dc20a7acc5f5656b4d3e13671958eb0a07e9de9a73ddeb1d4",
+      "state": "identical"
+    },
+    {
+      "path": "solar-lut-benchmark.js",
+      "sourceSha256": "a44bb5e2618b0dd4c414a670771444886e267a6014d95fab898b3adf2dd259c2",
+      "targetSha256": "a44bb5e2618b0dd4c414a670771444886e267a6014d95fab898b3adf2dd259c2",
+      "state": "identical"
+    },
+    {
+      "path": "solar-lut-webgpu-validation.json",
+      "sourceSha256": "3e5817012fc142d6b9f0f00615e185400aae7622456231faf757822672944817",
+      "targetSha256": "3e5817012fc142d6b9f0f00615e185400aae7622456231faf757822672944817",
+      "state": "identical"
+    },
+    {
+      "path": "SOLAR-LUT.md",
+      "sourceSha256": "affaa0b10c703564315aa62b346084d48ebfb1588243b4e84140a39fff85be38",
+      "targetSha256": "affaa0b10c703564315aa62b346084d48ebfb1588243b4e84140a39fff85be38",
+      "state": "identical"
+    },
+    {
+      "path": "SPECTRAL.md",
+      "sourceSha256": "ddb7977e62e3873b56205bb02b259a3e6078c1c5a7da154800d2eb58b52b45e3",
+      "targetSha256": "ddb7977e62e3873b56205bb02b259a3e6078c1c5a7da154800d2eb58b52b45e3",
+      "state": "identical"
+    },
+    {
+      "path": "src/atmosphere-inside.wgsl",
+      "sourceSha256": "c8feb5dbc49716ad54f74f77c388832bc8769bcfa365a6c28c3a2e3f77455c46",
+      "targetSha256": "c8feb5dbc49716ad54f74f77c388832bc8769bcfa365a6c28c3a2e3f77455c46",
+      "state": "identical"
+    },
+    {
+      "path": "src/atmosphere-space.wgsl",
+      "sourceSha256": "d7200b10c74b5cd004d339d743f0e123d1fc1127e17e04396e9987a133ddc44d",
+      "targetSha256": "d7200b10c74b5cd004d339d743f0e123d1fc1127e17e04396e9987a133ddc44d",
+      "state": "identical"
+    },
+    {
+      "path": "src/atmosphere.wgsl",
+      "sourceSha256": "40ccbbad163a83f78cbebc03b17f8cd4273554ae06f54644c2ed0cfe88cf6686",
+      "targetSha256": "40ccbbad163a83f78cbebc03b17f8cd4273554ae06f54644c2ed0cfe88cf6686",
+      "state": "identical"
+    },
+    {
+      "path": "src/frustum.gpu.js",
+      "sourceSha256": "5d05eba548a01a5885b87ddd5b0bb088871668b352d19bfc5b1110052107bd59",
+      "targetSha256": "5d05eba548a01a5885b87ddd5b0bb088871668b352d19bfc5b1110052107bd59",
+      "state": "identical"
+    },
+    {
+      "path": "src/frustum.js",
+      "sourceSha256": "82f7a6e511079e4f5523fe898b1d85eb02381c1fa7f052248132387dc1dab559",
+      "targetSha256": "82f7a6e511079e4f5523fe898b1d85eb02381c1fa7f052248132387dc1dab559",
+      "state": "identical"
+    },
+    {
+      "path": "src/geometry.js",
+      "sourceSha256": "bb69b91f1c2a013c2276f0b720ca0bc0c84a8c42e4cf10745c6d49e985d5e6e7",
+      "targetSha256": "9cd1d91adac8267de41df6f1c4df75c8a88a9131f2e5479bebf3d2b296e7197b",
+      "state": "adapted"
+    },
+    {
+      "path": "src/gpu.js",
+      "sourceSha256": "5907b6c83bf8deeb00ee192e911f76ec0030a2ad364eca9ab651a5ed874b3edd",
+      "targetSha256": "5907b6c83bf8deeb00ee192e911f76ec0030a2ad364eca9ab651a5ed874b3edd",
+      "state": "identical"
+    },
+    {
+      "path": "src/grid.js",
+      "sourceSha256": "5c0c4e257edfac3fd0438c3ead5de9d4fb636cf961cec0be5aed5ca35d937c0a",
+      "targetSha256": "5c0c4e257edfac3fd0438c3ead5de9d4fb636cf961cec0be5aed5ca35d937c0a",
+      "state": "identical"
+    },
+    {
+      "path": "src/grid.wgsl.js",
+      "sourceSha256": "918550e88d72b49370dcd7638af7baf0031a674efc315601150dea807fd26bea",
+      "targetSha256": "918550e88d72b49370dcd7638af7baf0031a674efc315601150dea807fd26bea",
+      "state": "identical"
+    },
+    {
+      "path": "src/integrator.js",
+      "sourceSha256": "004e1cdfc884ccd8712959adb426c6506bdbd4543133ba48123e5ad5a249622b",
+      "targetSha256": "004e1cdfc884ccd8712959adb426c6506bdbd4543133ba48123e5ad5a249622b",
+      "state": "identical"
+    },
+    {
+      "path": "src/mie.js",
+      "sourceSha256": "cfa7cb650db7f40b997a83073a2d72319118bdb5eb25ab32b8389ebdedc76db5",
+      "targetSha256": "c6b928eac339882985368539efeead3d394e62e26d19a0bd4afb50955861103d",
+      "state": "adapted"
+    },
+    {
+      "path": "src/model.js",
+      "sourceSha256": "61287f911c03256f93c82e1d910a29acb6ed00cfa079e338cbc7f9752536b326",
+      "targetSha256": "3f9fc0e234acbabe2be215e403aa9131a3472a2eb9d77884ebcddef870b6f886",
+      "state": "adapted"
+    },
+    {
+      "path": "src/octree.js",
+      "sourceSha256": "1ace3f1f9e98d9b944f614f6c9fef3703c20fa28d913f73214b262433dd36a7a",
+      "targetSha256": "1ace3f1f9e98d9b944f614f6c9fef3703c20fa28d913f73214b262433dd36a7a",
+      "state": "identical"
+    },
+    {
+      "path": "src/sky-reuse.js",
+      "sourceSha256": "94efd09d8bcc532a30faa9b4d7fa6bb6552129d86e9270c3b39e7074dd33f03a",
+      "targetSha256": "94efd09d8bcc532a30faa9b4d7fa6bb6552129d86e9270c3b39e7074dd33f03a",
+      "state": "identical"
+    },
+    {
+      "path": "src/sky-view.gpu.js",
+      "sourceSha256": "4f72976e524aaa1902348d6bab8603172581530bc499e993db0a27e598b13b72",
+      "targetSha256": "c787f0c0fdba0f2a91eda66072662839acda9bf78b4788be6c42da86aa46cc83",
+      "state": "adapted"
+    },
+    {
+      "path": "src/sky-view.js",
+      "sourceSha256": "2f1772d3a0982c0586f2db6377f8a8c4743b8e4775495a94b38c582cc290c798",
+      "targetSha256": "2f1772d3a0982c0586f2db6377f8a8c4743b8e4775495a94b38c582cc290c798",
+      "state": "identical"
+    },
+    {
+      "path": "src/sky-view.wgsl.js",
+      "sourceSha256": "97e27195cff6fd0e1abfaa6484057dbc3b9b222b9e1122a4d68c1d22d60a8f82",
+      "targetSha256": "97e27195cff6fd0e1abfaa6484057dbc3b9b222b9e1122a4d68c1d22d60a8f82",
+      "state": "identical"
+    },
+    {
+      "path": "src/solar-lut.gpu.js",
+      "sourceSha256": "8b42dcebb55e89ecf9e5ca3afbdd301e87ea1d9afd06d2fe82b135929f180272",
+      "targetSha256": "c46377336f0d2efaa8d8469c68f191ed4ae02ae4629a770d00df9b0ff7d6779c",
+      "state": "adapted"
+    },
+    {
+      "path": "src/solar-lut.js",
+      "sourceSha256": "5b0566543595c99a1805ef39b6904d0890f4a7ed522db3b2aae3632917154b89",
+      "targetSha256": "77c64fefb90ca35c05cf8da632c8c3e8f68e0b3ddce90bb105de4b450498e332",
+      "state": "adapted"
+    },
+    {
+      "path": "src/solar-lut.wgsl.js",
+      "sourceSha256": "54ee8ae907019fab1e6cf70bacad486ec330762d8605ad63223cdb97bcecab5c",
+      "targetSha256": "54ee8ae907019fab1e6cf70bacad486ec330762d8605ad63223cdb97bcecab5c",
+      "state": "identical"
+    },
+    {
+      "path": "src/spectral-sky.wgsl.js",
+      "sourceSha256": "9538336bf6b22d344ec2abfe39ba7682750dc44d3fdf3fb9c6ab6d69098e18d1",
+      "targetSha256": "60f1f1f12844779e424310ace95c67ac79c9f457633c0d9930769cb6605ff87a",
+      "state": "adapted"
+    },
+    {
+      "path": "src/spectrum.js",
+      "sourceSha256": "e2a355b90e36212fc402886c66c3131a2d04716c0473e6e0d7b20fa29aac76ea",
+      "targetSha256": "d8c48411fe153fbf82347c1d3e0bfddb47e120380643768c53c524c7b0737cf1",
+      "state": "adapted"
+    },
+    {
+      "path": "test/atmosphere.test.js",
+      "sourceSha256": "e80203e3382dee5c3a2c2e25aa5e76d60f3901fd40e61ce990c31831be31e496",
+      "targetSha256": "e80203e3382dee5c3a2c2e25aa5e76d60f3901fd40e61ce990c31831be31e496",
+      "state": "identical"
+    },
+    {
+      "path": "test/fixtures/mie-reference.json",
+      "sourceSha256": "78c2223d76be49080e316d5870801d84be74c21eeea085b660e7b649e289041c",
+      "targetSha256": "78c2223d76be49080e316d5870801d84be74c21eeea085b660e7b649e289041c",
+      "state": "identical"
+    },
+    {
+      "path": "test/frustum.test.js",
+      "sourceSha256": "2e0b92a717bca9e237b7c2751981d824a1badd142ad07256d046d68f26964b93",
+      "targetSha256": "2e0b92a717bca9e237b7c2751981d824a1badd142ad07256d046d68f26964b93",
+      "state": "identical"
+    },
+    {
+      "path": "test/sky-reuse.test.js",
+      "sourceSha256": "80f6c876029fc0d9ff07e4236670b55d6409d60de04fb6ab8ef2f573fa9ebe26",
+      "targetSha256": "80f6c876029fc0d9ff07e4236670b55d6409d60de04fb6ab8ef2f573fa9ebe26",
+      "state": "identical"
+    },
+    {
+      "path": "test/sky-view.test.js",
+      "sourceSha256": "80c47891ba06461d6327b99737d8d3eaf6b0f9d085b8f8d2691c31aa66b6abb5",
+      "targetSha256": "80c47891ba06461d6327b99737d8d3eaf6b0f9d085b8f8d2691c31aa66b6abb5",
+      "state": "identical"
+    },
+    {
+      "path": "test/solar-lut.test.js",
+      "sourceSha256": "95931da7e7fa4a38f7834b4dfd93feff8f9008730f9ed027e23dc37d4c7f54ac",
+      "targetSha256": "95931da7e7fa4a38f7834b4dfd93feff8f9008730f9ed027e23dc37d4c7f54ac",
+      "state": "identical"
+    },
+    {
+      "path": "test/spectrum.test.js",
+      "sourceSha256": "2f70da1e906fd9d52597e6cd5155a2a25f1c12b3f2c45ff8dacf1589d12769ec",
+      "targetSha256": "0c8dfc161ddbcd5ea8b98db0a598fd17bcd111a44058161124147ac8e0291231",
+      "state": "adapted"
+    },
+    {
+      "path": "twilight.js",
+      "sourceSha256": "206e91a10d81e489bbed693a1b0d6afb327eda0bd2040f9ce6325356efd2719f",
+      "targetSha256": "206e91a10d81e489bbed693a1b0d6afb327eda0bd2040f9ce6325356efd2719f",
+      "state": "identical"
+    },
+    {
+      "path": "VISUAL-TARGET.md",
+      "sourceSha256": "605789291702b0134701329c4f6440e1946929513b75d35b3132ffa6394f02ce",
+      "targetSha256": "605789291702b0134701329c4f6440e1946929513b75d35b3132ffa6394f02ce",
+      "state": "identical"
+    }
+  ]
+}

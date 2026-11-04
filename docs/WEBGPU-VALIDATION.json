@@ -1,0 +1,39 @@
+{
+  "dependency": "@spacexr/geodesy@0.4.0",
+  "definition": [
+    1920,
+    1080
+  ],
+  "probesPerCase": 34,
+  "cases": [
+    {
+      "layers": 1,
+      "wavelengths": 48,
+      "maxLinearRadianceError": 1.607574976264948e-05,
+      "buildGpuMs": 60.94848,
+      "displayGpuMs": 2.097152
+    },
+    {
+      "layers": 2,
+      "wavelengths": 24,
+      "maxLinearRadianceError": 0.0010201296535768123,
+      "buildGpuMs": 77.135872,
+      "displayGpuMs": 3.735552
+    },
+    {
+      "layers": 3,
+      "wavelengths": 24,
+      "maxLinearRadianceError": 0.0009721059707644696,
+      "buildGpuMs": 53.018624,
+      "displayGpuMs": 2.490368
+    },
+    {
+      "layers": 4,
+      "wavelengths": 24,
+      "maxLinearRadianceError": 0.0009168511517494982,
+      "buildGpuMs": 64.946176,
+      "displayGpuMs": 3.866624
+    }
+  ],
+  "notes": "Isolated GPU passes on this machine. CPU reference uses 256 view steps and 96 direct solar steps. This validates implementation agreement, not PDS observational calibration or XR frame rate."
+}

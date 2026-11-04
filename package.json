@@ -1,0 +1,122 @@
+{
+    "name": "@spacexr/atmosphere",
+    "version": "0.1.0",
+    "description": "Renderer-neutral ellipsoidal atmosphere and spectral scattering primitives for SpaceXR.",
+    "type": "module",
+    "license": "Apache-2.0",
+    "author": "Guillaume Pelletier (SpaceXR)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pandaGaume/spacexr-atmosphere.git"
+    },
+    "homepage": "https://github.com/pandaGaume/spacexr-atmosphere#readme",
+    "bugs": {
+        "url": "https://github.com/pandaGaume/spacexr-atmosphere/issues"
+    },
+    "keywords": [
+        "atmosphere",
+        "ellipsoid",
+        "scattering",
+        "mie",
+        "rayleigh",
+        "spectral",
+        "spacexr"
+    ],
+    "engines": {
+        "node": ">=20.11.0"
+    },
+    "sideEffects": false,
+    "files": [
+        "dist",
+        "src",
+        "LICENSE",
+        "README.md",
+        "CHANGELOG.md"
+    ],
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        },
+        "./geometry": {
+            "types": "./dist/geometry.d.ts",
+            "import": "./dist/geometry.js",
+            "default": "./dist/geometry.js"
+        },
+        "./model": {
+            "types": "./dist/model.d.ts",
+            "import": "./dist/model.js",
+            "default": "./dist/model.js"
+        },
+        "./scattering": {
+            "types": "./dist/scattering.d.ts",
+            "import": "./dist/scattering.js",
+            "default": "./dist/scattering.js"
+        },
+        "./spectrum": {
+            "types": "./dist/spectrum.d.ts",
+            "import": "./dist/spectrum.js",
+            "default": "./dist/spectrum.js"
+        },
+        "./package.json": "./package.json",
+        "./layers": {
+            "types": "./dist/layers.d.ts",
+            "import": "./dist/layers.js",
+            "default": "./dist/layers.js"
+        },
+        "./composition": {
+            "types": "./dist/composition.d.ts",
+            "import": "./dist/composition.js",
+            "default": "./dist/composition.js"
+        },
+        "./presets": {
+            "types": "./dist/presets.d.ts",
+            "import": "./dist/presets.js",
+            "default": "./dist/presets.js"
+        }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsup",
+        "clean": "rimraf dist coverage docs/api",
+        "typecheck": "tsc -p tsconfig.json --noEmit",
+        "test": "npm run build && vitest run --coverage.enabled=false && npm run test:lab",
+        "test:watch": "vitest",
+        "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+        "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
+        "format": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"*.{json,md}\"",
+        "format:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"*.{json,md}\"",
+        "docs": "typedoc --options typedoc.json",
+        "check": "npm run format && npm run lint && npm run typecheck && npm run test && npm run docs",
+        "prepublishOnly": "npm run check",
+        "test:lab": "node --test examples/atmosphere-lab/test/*.test.js",
+        "start": "npm run build && node examples/atmosphere-lab/serve.js",
+        "benchmark": "node examples/atmosphere-lab/benchmark.js",
+        "benchmark:twilight": "node examples/atmosphere-lab/twilight.js",
+        "pack:check": "npm pack --dry-run"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.0",
+        "prettier": "^3.2.0",
+        "rimraf": "~6.0.1",
+        "tslib": "^2.8.1",
+        "tsup": "^8.5.1",
+        "typedoc": "^0.28.0",
+        "typescript": "^5.4.0",
+        "vitest": "4.1.11"
+    },
+    "dependencies": {
+        "@spacexr/geodesy": "0.4.0"
+    }
+}

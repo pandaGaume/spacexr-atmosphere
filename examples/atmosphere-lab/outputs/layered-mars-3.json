@@ -1,0 +1,908 @@
+{
+  "mode": "Transport spectral physique + Sky-View HD",
+  "physicalSpectrum": {
+    "config": {
+      "planet": "mars",
+      "pressure": 636,
+      "temperature": 210,
+      "gravity": 3.71,
+      "mix": {
+        "N2": 2.6,
+        "O2": 0.16,
+        "CO2": 95,
+        "Ar": 1.9,
+        "H2O": 0
+      },
+      "dustTau": 0.3,
+      "dustHeight": 10000,
+      "radiusUm": 0.7,
+      "logSigma": 0.3,
+      "indexN": 1.5,
+      "indexK": 0.003,
+      "distanceAU": 1.524,
+      "source": "blackbody",
+      "starTemperature": 5778,
+      "bandCenter": 550,
+      "bandWidth": 80,
+      "wavelengths": 24,
+      "layers": [
+        {
+          "id": "gas",
+          "kind": "gas",
+          "profile": {
+            "kind": "exponential",
+            "bottomAltitudeMeters": 0,
+            "topAltitudeMeters": 129841.06272273714,
+            "referenceAltitudeMeters": 0,
+            "scaleHeightMeters": 10820.088560228096,
+            "densityScale": 1
+          },
+          "gas": {
+            "composition": {
+              "referencePressurePa": 636,
+              "components": [
+                {
+                  "speciesId": "N2",
+                  "moleFraction": 2.6,
+                  "molarMass": 0.0280134
+                },
+                {
+                  "speciesId": "O2",
+                  "moleFraction": 0.16,
+                  "molarMass": 0.031998
+                },
+                {
+                  "speciesId": "CO2",
+                  "moleFraction": 95,
+                  "molarMass": 0.04401
+                },
+                {
+                  "speciesId": "Ar",
+                  "moleFraction": 1.9,
+                  "molarMass": 0.039948
+                },
+                {
+                  "speciesId": "H2O",
+                  "moleFraction": 0,
+                  "molarMass": 0.01801528
+                }
+              ],
+              "particulates": []
+            },
+            "pressurePa": 636,
+            "temperatureK": 210,
+            "gravity": 3.71
+          }
+        },
+        {
+          "id": "dust",
+          "kind": "aerosol",
+          "profile": {
+            "kind": "exponential",
+            "bottomAltitudeMeters": 0,
+            "topAltitudeMeters": 129841.06272273714,
+            "referenceAltitudeMeters": 0,
+            "scaleHeightMeters": 10000,
+            "densityScale": 1
+          },
+          "aerosol": {
+            "radiusUm": 0.7,
+            "logSigma": 0.3,
+            "indexN": 1.5,
+            "indexK": 0.003,
+            "numberDensityPerM3": 6714595.338437714,
+            "particulate": {
+              "particulateId": "experimental-dust",
+              "displayName": "Experimental homogeneous-sphere dust",
+              "pmClass": "dust"
+            }
+          }
+        },
+        {
+          "id": "high-dust-2",
+          "kind": "aerosol",
+          "profile": {
+            "kind": "gaussian",
+            "bottomAltitudeMeters": 30000,
+            "topAltitudeMeters": 100000,
+            "referenceAltitudeMeters": 60000,
+            "scaleHeightMeters": 10000,
+            "densityScale": 1
+          },
+          "aerosol": {
+            "radiusUm": 0.7,
+            "logSigma": 0.3,
+            "indexN": 1.5,
+            "indexK": 0.003,
+            "numberDensityPerM3": 67145.95338437714,
+            "particulate": {
+              "particulateId": "high-dust-2",
+              "displayName": "Experimental high dust",
+              "pmClass": "dust"
+            }
+          }
+        }
+      ]
+    },
+    "layers": [
+      {
+        "id": "gas",
+        "kind": "gas",
+        "profile": {
+          "kind": "exponential",
+          "bottomAltitudeMeters": 0,
+          "topAltitudeMeters": 129841.06272273714,
+          "referenceAltitudeMeters": 0,
+          "scaleHeightMeters": 10820.088560228096,
+          "densityScale": 1
+        },
+        "gas": {
+          "composition": {
+            "referencePressurePa": 636,
+            "components": [
+              {
+                "speciesId": "N2",
+                "moleFraction": 2.6,
+                "molarMass": 0.0280134
+              },
+              {
+                "speciesId": "O2",
+                "moleFraction": 0.16,
+                "molarMass": 0.031998
+              },
+              {
+                "speciesId": "CO2",
+                "moleFraction": 95,
+                "molarMass": 0.04401
+              },
+              {
+                "speciesId": "Ar",
+                "moleFraction": 1.9,
+                "molarMass": 0.039948
+              },
+              {
+                "speciesId": "H2O",
+                "moleFraction": 0,
+                "molarMass": 0.01801528
+              }
+            ],
+            "particulates": []
+          },
+          "pressurePa": 636,
+          "temperatureK": 210,
+          "gravity": 3.71
+        }
+      },
+      {
+        "id": "dust",
+        "kind": "aerosol",
+        "profile": {
+          "kind": "exponential",
+          "bottomAltitudeMeters": 0,
+          "topAltitudeMeters": 129841.06272273714,
+          "referenceAltitudeMeters": 0,
+          "scaleHeightMeters": 10000,
+          "densityScale": 1
+        },
+        "aerosol": {
+          "radiusUm": 0.7,
+          "logSigma": 0.3,
+          "indexN": 1.5,
+          "indexK": 0.003,
+          "numberDensityPerM3": 6714595.338437714,
+          "particulate": {
+            "particulateId": "experimental-dust",
+            "displayName": "Experimental homogeneous-sphere dust",
+            "pmClass": "dust"
+          }
+        }
+      },
+      {
+        "id": "high-dust-2",
+        "kind": "aerosol",
+        "profile": {
+          "kind": "gaussian",
+          "bottomAltitudeMeters": 30000,
+          "topAltitudeMeters": 100000,
+          "referenceAltitudeMeters": 60000,
+          "scaleHeightMeters": 10000,
+          "densityScale": 1
+        },
+        "aerosol": {
+          "radiusUm": 0.7,
+          "logSigma": 0.3,
+          "indexN": 1.5,
+          "indexK": 0.003,
+          "numberDensityPerM3": 67145.95338437714,
+          "particulate": {
+            "particulateId": "high-dust-2",
+            "displayName": "Experimental high dust",
+            "pmClass": "dust"
+          }
+        }
+      }
+    ],
+    "wavelengthRangeNm": [
+      380,
+      780
+    ],
+    "wavelengths": 24,
+    "stepNm": 16.666666666666668,
+    "meanMassAmu": 43.495943407585784,
+    "gasScaleHeightMeters": 10820.088560228096,
+    "dustNumberDensityPerM3": 6714595.338437714,
+    "method": "Layered IAtmosphere spectral single scattering, ideal gas, static polarizabilities, homogeneous-sphere Mie and lognormal particles, Planck or Gaussian source, CIE XYZ to linear sRGB. Reference-state summaries are zero when no global reference state is supplied.",
+    "limitations": "No molecular absorption lines, multiple scattering, polarization or nonspherical dust. Layer-local n,k are constant across wavelengths. No PDS calibration has been performed."
+  },
+  "framing": {
+    "horizontalFovDegrees": 20,
+    "verticalFovDegrees": 11.328589588027203,
+    "solarDisk": {
+      "angularDiameterDegrees": 0.34967493930735427,
+      "widthPixels": 33.23670328436242,
+      "heightPixels": 33.24606093506941,
+      "centerPixels": [
+        960,
+        669.2017586001601
+      ],
+      "boundsPixels": [
+        943.3816483578188,
+        652.5799318911952,
+        976.6183516421812,
+        685.8259928262646
+      ]
+    }
+  },
+  "nativeImage": {
+    "width": 1920,
+    "height": 1080,
+    "pixels": 2073600,
+    "canvasWidth": 1920,
+    "canvasHeight": 1080,
+    "upscaledLowResolutionImage": false
+  },
+  "solarLut": {
+    "ms": 24.100000023841858,
+    "gpuMs": 7.405568000000001,
+    "size": [
+      128,
+      32,
+      32
+    ],
+    "bytes": 1048576,
+    "solarSteps": 64,
+    "reused": false
+  },
+  "skyView": {
+    "gpuMs": 53.018624,
+    "ms": 63.59999996423721,
+    "width": 256,
+    "height": 128,
+    "samples": 64,
+    "bytes": 10485760,
+    "wavelengthGroups": 8,
+    "regime": "internal"
+  },
+  "hdDisplay": {
+    "measurements": [
+      {
+        "gpuMs": 2.686976,
+        "ms": 13,
+        "width": 1920,
+        "height": 1080,
+        "pixels": 2073600,
+        "imageReadback": false
+      },
+      {
+        "gpuMs": 2.490368,
+        "ms": 4.899999976158142,
+        "width": 1920,
+        "height": 1080,
+        "pixels": 2073600,
+        "imageReadback": false
+      },
+      {
+        "gpuMs": 2.424832,
+        "ms": 7.800000011920929,
+        "width": 1920,
+        "height": 1080,
+        "pixels": 2073600,
+        "imageReadback": false
+      }
+    ],
+    "medianGpuMs": 2.490368,
+    "imageReadback": false,
+    "steadyOrientationFramesReuseLuts": true
+  },
+  "rebuildSkyAndDisplayGpuMs": 55.508992000000006,
+  "setupAndValidationWallMs": 953.8000000119209,
+  "validation": {
+    "probes": 34,
+    "nonzeroReferenceRays": 34,
+    "radianceRMSE": 0.00037382691949275994,
+    "maxRadianceError": 0.0009721059707644697,
+    "referencePeakRadiance": 0.15697500747823742,
+    "reference": "Independent CPU spectral integration, 256 view steps and 96 direct solar steps. No GPU solar LUT. Disk and neutral ground excluded.",
+    "raySamples": [
+      {
+        "direction": [
+          0.10966354235928447,
+          0.9884115954632822,
+          -0.10495916077666764
+        ],
+        "cachedRgb": [
+          0.08066529035568237,
+          0.0825941264629364,
+          0.08017760515213013
+        ],
+        "referenceRgb": [
+          0.08119508148668142,
+          0.08315965241267789,
+          0.08072818833966368
+        ]
+      },
+      {
+        "direction": [
+          0.11020445164685469,
+          0.9932868803613075,
+          -0.03515895532175593
+        ],
+        "cachedRgb": [
+          0.10787716507911682,
+          0.12106256186962128,
+          0.13767604529857635
+        ],
+        "referenceRgb": [
+          0.10859529428603037,
+          0.12186601448518487,
+          0.1385943288233407
+        ]
+      },
+      {
+        "direction": [
+          0.11027262959644146,
+          0.9939013769795703,
+          0
+        ],
+        "cachedRgb": [
+          0.11200853437185287,
+          0.12719981372356415,
+          0.1479288637638092
+        ],
+        "referenceRgb": [
+          0.11271273325649747,
+          0.12804830313288965,
+          0.14890096973457367
+        ]
+      },
+      {
+        "direction": [
+          0.11020445164685469,
+          0.9932868803613075,
+          0.03515895532175593
+        ],
+        "cachedRgb": [
+          0.10787716507911682,
+          0.12106256186962128,
+          0.13767604529857635
+        ],
+        "referenceRgb": [
+          0.10859529428603037,
+          0.12186601448518487,
+          0.1385943288233407
+        ]
+      },
+      {
+        "direction": [
+          0.10966354235928447,
+          0.9884115954632822,
+          0.10495916077666766
+        ],
+        "cachedRgb": [
+          0.08066529035568237,
+          0.0825941264629364,
+          0.08017760515213013
+        ],
+        "referenceRgb": [
+          0.08119508148668142,
+          0.08315965241267789,
+          0.08072818833966368
+        ]
+      },
+      {
+        "direction": [
+          0.07047382863845948,
+          0.9919547277780691,
+          -0.10516300450146092
+        ],
+        "cachedRgb": [
+          0.07000617682933807,
+          0.07656364887952805,
+          0.0815393328666687
+        ],
+        "referenceRgb": [
+          0.07030645700754652,
+          0.07691301289412791,
+          0.08191466780151377
+        ]
+      },
+      {
+        "direction": [
+          0.07082279841840242,
+          0.9968666536625266,
+          -0.03522791563323679
+        ],
+        "cachedRgb": [
+          0.09428077936172485,
+          0.11379161477088928,
+          0.14479714632034302
+        ],
+        "referenceRgb": [
+          0.09476658917850667,
+          0.11438459139999732,
+          0.1455601242316625
+        ]
+      },
+      {
+        "direction": [
+          0.0708667851237629,
+          0.9974857887540165,
+          0
+        ],
+        "cachedRgb": [
+          0.09794614464044571,
+          0.11974658817052841,
+          0.1561402678489685
+        ],
+        "referenceRgb": [
+          0.09845152316721496,
+          0.12038530008170954,
+          0.15697500747823742
+        ]
+      },
+      {
+        "direction": [
+          0.07082279841840242,
+          0.9968666536625266,
+          0.03522791563323679
+        ],
+        "cachedRgb": [
+          0.09428077936172485,
+          0.11379161477088928,
+          0.14479714632034302
+        ],
+        "referenceRgb": [
+          0.09476658917850667,
+          0.11438459139999732,
+          0.1455601242316625
+        ]
+      },
+      {
+        "direction": [
+          0.07047382863845948,
+          0.9919547277780691,
+          0.10516300450146093
+        ],
+        "cachedRgb": [
+          0.07000617682933807,
+          0.07656364887952805,
+          0.0815393328666687
+        ],
+        "referenceRgb": [
+          0.07030645700754652,
+          0.07691301289412791,
+          0.08191466780151377
+        ]
+      },
+      {
+        "direction": [
+          0.044881363933422604,
+          0.9934369103215076,
+          -0.1052082144242185
+        ],
+        "cachedRgb": [
+          0.05157829076051712,
+          0.058322932571172714,
+          0.06458400189876556
+        ],
+        "referenceRgb": [
+          0.051641032866760354,
+          0.05840864270939009,
+          0.06468498681017633
+        ]
+      },
+      {
+        "direction": [
+          0.04510379841282975,
+          0.9983604376523392,
+          -0.03524321068467617
+        ],
+        "cachedRgb": [
+          0.06950823217630386,
+          0.08692712336778641,
+          0.11574970185756683
+        ],
+        "referenceRgb": [
+          0.06976751851033389,
+          0.08726800108481592,
+          0.11620735031878546
+        ]
+      },
+      {
+        "direction": [
+          0.04513183588510896,
+          0.9989810395546254,
+          0
+        ],
+        "cachedRgb": [
+          0.07222349941730499,
+          0.09151819348335266,
+          0.12496275454759598
+        ],
+        "referenceRgb": [
+          0.07250065524051492,
+          0.09189233277161749,
+          0.1254666101090786
+        ]
+      },
+      {
+        "direction": [
+          0.04510379841282975,
+          0.9983604376523392,
+          0.03524321068467617
+        ],
+        "cachedRgb": [
+          0.06950823217630386,
+          0.08692712336778641,
+          0.11574970185756683
+        ],
+        "referenceRgb": [
+          0.06976751851033389,
+          0.08726800108481592,
+          0.11620735031878546
+        ]
+      },
+      {
+        "direction": [
+          0.044881363933422604,
+          0.9934369103215076,
+          0.10520821442421852
+        ],
+        "cachedRgb": [
+          0.05157829076051712,
+          0.058322932571172714,
+          0.06458400189876556
+        ],
+        "referenceRgb": [
+          0.051641032866760354,
+          0.05840864270939009,
+          0.06468498681017633
+        ]
+      },
+      {
+        "direction": [
+          0.011369787730147234,
+          0.9943899991508346,
+          -0.10516300450146088
+        ],
+        "cachedRgb": [
+          0.02373550832271576,
+          0.027681879699230194,
+          0.03127939626574516
+        ],
+        "referenceRgb": [
+          0.023643828970472718,
+          0.027581513820656,
+          0.031167067665698857
+        ]
+      },
+      {
+        "direction": [
+          0.011426088237709306,
+          0.9993139839248332,
+          -0.03522791563323679
+        ],
+        "cachedRgb": [
+          0.0318426713347435,
+          0.04112531617283821,
+          0.0559832863509655
+        ],
+        "referenceRgb": [
+          0.03188705572253407,
+          0.041183788839829934,
+          0.05606663385758699
+        ]
+      },
+      {
+        "direction": [
+          0.011433184765775956,
+          0.9999346390070261,
+          0
+        ],
+        "cachedRgb": [
+          0.033059824258089066,
+          0.043269526213407516,
+          0.06040619686245918
+        ],
+        "referenceRgb": [
+          0.03312871226069459,
+          0.04336131923300902,
+          0.060539469568165256
+        ]
+      },
+      {
+        "direction": [
+          0.011426088237709306,
+          0.9993139839248332,
+          0.03522791563323679
+        ],
+        "cachedRgb": [
+          0.0318426713347435,
+          0.04112531617283821,
+          0.0559832863509655
+        ],
+        "referenceRgb": [
+          0.03188705572253407,
+          0.041183788839829934,
+          0.05606663385758699
+        ]
+      },
+      {
+        "direction": [
+          0.011369787730147234,
+          0.9943899991508346,
+          0.10516300450146089
+        ],
+        "cachedRgb": [
+          0.02373550832271576,
+          0.027681877836585045,
+          0.03127939626574516
+        ],
+        "referenceRgb": [
+          0.023643828970472718,
+          0.027581513820656,
+          0.031167067665698857
+        ]
+      },
+      {
+        "direction": [
+          -0.022088219883439543,
+          0.9942268868444644,
+          -0.10500003818068547
+        ],
+        "cachedRgb": [
+          0.00001319154671364231,
+          0.000015114615052880254,
+          0.000016618918380117975
+        ],
+        "referenceRgb": [
+          0.000013342625152468746,
+          0.00001526792471207547,
+          0.000016789472979956217
+        ]
+      },
+      {
+        "direction": [
+          -0.022197254300837934,
+          0.999134704221372,
+          -0.03517278382464551
+        ],
+        "cachedRgb": [
+          0.000017600796127226204,
+          0.000022294789232546464,
+          0.000029385402740444988
+        ],
+        "referenceRgb": [
+          0.000017784755850538593,
+          0.000022494290061275575,
+          0.00002965603053952029
+        ]
+      },
+      {
+        "direction": [
+          -0.02221099743966371,
+          0.9997533053672465,
+          0
+        ],
+        "cachedRgb": [
+          0.000018253196685691364,
+          0.000023427643100148998,
+          0.000031652474717702717
+        ],
+        "referenceRgb": [
+          0.000018450050399986862,
+          0.00002364501646606894,
+          0.00003195278534196992
+        ]
+      },
+      {
+        "direction": [
+          -0.022197254300837934,
+          0.999134704221372,
+          0.03517278382464551
+        ],
+        "cachedRgb": [
+          0.000017600796127226204,
+          0.000022294789232546464,
+          0.000029385402740444988
+        ],
+        "referenceRgb": [
+          0.000017784755850538593,
+          0.000022494290061275575,
+          0.00002965603053952029
+        ]
+      },
+      {
+        "direction": [
+          -0.022088219883439543,
+          0.9942268868444644,
+          0.10500003818068548
+        ],
+        "cachedRgb": [
+          0.00001319154671364231,
+          0.000015114615052880254,
+          0.000016618918380117975
+        ],
+        "referenceRgb": [
+          0.000013342625152468746,
+          0.00001526792471207547,
+          0.000016789472979956217
+        ]
+      },
+      {
+        "direction": [
+          -0.047568092253885974,
+          0.9933553637529502,
+          -0.1047969365132869
+        ],
+        "cachedRgb": [
+          0.000005614039764623158,
+          0.000006267598109843675,
+          0.000006615248366870219
+        ],
+        "referenceRgb": [
+          0.000005734255787127349,
+          0.000006398431336208792,
+          0.000006736438076720332
+        ]
+      },
+      {
+        "direction": [
+          -0.04780198913811989,
+          0.9982397876074696,
+          -0.035104077709479986
+        ],
+        "cachedRgb": [
+          0.000007452523277606815,
+          0.000009169410986942239,
+          0.000011500323125801515
+        ],
+        "referenceRgb": [
+          0.0000076167393152334015,
+          0.0000093656324954068,
+          0.000011718108441868236
+        ]
+      },
+      {
+        "direction": [
+          -0.04783146949381946,
+          0.9988554202316079,
+          0
+        ],
+        "cachedRgb": [
+          0.000007726695912424475,
+          0.000009630017302697524,
+          0.000012368256648187526
+        ],
+        "referenceRgb": [
+          0.000007898259100979446,
+          0.000009837595216436271,
+          0.000012604500090958056
+        ]
+      },
+      {
+        "direction": [
+          -0.04780198913811989,
+          0.9982397876074696,
+          0.035104077709479986
+        ],
+        "cachedRgb": [
+          0.000007452523277606815,
+          0.000009169410986942239,
+          0.000011500323125801515
+        ],
+        "referenceRgb": [
+          0.0000076167393152334015,
+          0.0000093656324954068,
+          0.000011718108441868236
+        ]
+      },
+      {
+        "direction": [
+          -0.047568092253885974,
+          0.9933553637529502,
+          0.10479693651328692
+        ],
+        "cachedRgb": [
+          0.000005614039764623158,
+          0.000006267598109843675,
+          0.000006615248366870219
+        ],
+        "referenceRgb": [
+          0.000005734255787127349,
+          0.000006398431336208792,
+          0.000006736438076720332
+        ]
+      },
+      {
+        "direction": [
+          0.020425916076442348,
+          0.9997913692128163,
+          0
+        ],
+        "cachedRgb": [
+          0.04271320253610611,
+          0.055527955293655396,
+          0.07741186022758484
+        ],
+        "referenceRgb": [
+          0.04278323541211619,
+          0.055628309083673375,
+          0.07754365413456946
+        ]
+      },
+      {
+        "direction": [
+          0.018443550730774475,
+          0.9998299032517687,
+          0
+        ],
+        "cachedRgb": [
+          0.04034041985869408,
+          0.0525340773165226,
+          0.07330320030450821
+        ],
+        "referenceRgb": [
+          0.040551962581461425,
+          0.052812068148163645,
+          0.07366433115586501
+        ]
+      },
+      {
+        "direction": [
+          0.01745240643728351,
+          0.999847695156391,
+          0
+        ],
+        "cachedRgb": [
+          0.03930440917611122,
+          0.05122094601392746,
+          0.07148575037717819
+        ],
+        "referenceRgb": [
+          0.03945612260408487,
+          0.051424761435709745,
+          0.07174761320182638
+        ]
+      },
+      {
+        "direction": [
+          0.016461291625193678,
+          0.9998645037593995,
+          0
+        ],
+        "cachedRgb": [
+          0.038298286497592926,
+          0.04994373768568039,
+          0.06971297413110733
+        ],
+        "referenceRgb": [
+          0.03837452988267274,
+          0.050052819458415096,
+          0.06984857637915037
+        ]
+      }
+    ]
+  },
+  "note": "Le temps d affichage seul reutilise la Sky-View LUT. Un changement de position ou de soleil exige sa reconstruction. Validation hors boucle; disque solaire natif et globe uni exclus du comparatif numerique."
+}
