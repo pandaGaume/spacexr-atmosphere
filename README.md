@@ -79,4 +79,4 @@ Spectral single scattering uses Planck or an experimental Gaussian source, molec
 
 Historical images and timings remain under the laboratory's `outputs` directory. They predate parts of this migration and do not measure the new general layered pipeline. Sky-View rebuild cost and cached HD display cost must be reported separately. The layer GPU ABI packs 304 bytes per wavelength triple and retains separate Mie radiance per atmospheric layer; it must not be mixed with the historical 112-byte ABI.
 
-See [migration provenance](docs/MIGRATION.md), [layer design](docs/LAYERS.md), and the laboratory's [spectral notes](examples/atmosphere-lab/SPECTRAL.md).
+See [migration provenance](docs/MIGRATION.md), [layer design](docs/LAYERS.md), the laboratory's [spectral notes](examples/atmosphere-lab/SPECTRAL.md), and the [integration brief](docs/INTEGRATION.md), in French, on what keeps the renderer inside the laboratory.
