@@ -1,3 +1,4 @@
+import {PublicGpuSky} from './public-sky.js';
 import { packLayerProfiles } from './layers.js';
 import { spectralSkySources } from './spectral-sky.wgsl.js';
 import { spectrumBuffer, phaseTable, integrateSpectral } from './spectrum.js';
@@ -10,6 +11,7 @@ import { viewStruct, skyMapping, mediumCoordinates, solarAtCoordinates, bakeSkyV
 
 export class GpuSkyView {
     static async create(device, canvas, model, camera, solarLut, options = {}) {
+        if(options.spectral) return PublicGpuSky.create(device,canvas,model,camera,options);
         solarLut.assertCompatible(model);
         if (solarLut.device !== device) throw new Error('Solar LUT must belong to the display device');
         const response = await fetch(new URL('./atmosphere.wgsl', import.meta.url));

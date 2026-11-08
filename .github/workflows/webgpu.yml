@@ -1,0 +1,28 @@
+name: WebGPU integration
+on:
+    push:
+        branches: [main, "feat/**"]
+    pull_request:
+        branches: [main]
+jobs:
+    packed-sky:
+        runs-on: windows-latest
+        timeout-minutes: 25
+        steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v5
+              with:
+                  node-version: 22.x
+                  cache: npm
+            - run: npm ci
+            - run: npx playwright install chrome
+            - run: npm run test:webgpu
+            - uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: webgpu-validation
+                  path: |
+                      .cache/webgpu-validation.json
+                      .cache/sky-consumer.png
+                      .cache/lab-public-validation.json
+                      .cache/lab-public.png

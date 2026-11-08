@@ -1,0 +1,13 @@
+{
+    "status": "pre-measurement acceptance budget, version 1",
+    "rationale": "Absolute scene-linear radiance budget is 0.002 reference-solar-normalized units. Spectral transmittance budget is 0.002. Near-zero signals use absolute error only. Geometry budget is 0.01 m locally, 1 m at orbital distances. These are numerical integration budgets, not observational calibration.",
+    "radianceAbsolute": 0.002,
+    "radianceRelative": 0.05,
+    "signalFloor": 0.04,
+    "transmittanceAbsolute": 0.002,
+    "referenceConvergence": 0.0005,
+    "altitudeMeters": 0.01,
+    "intersectionMeters": 1,
+    "directionRadians": 2e-7,
+    "tangentRationale": "A float32 direction normalized in a shader has an angular uncertainty. Exact tangent cases use independent CPU radiance envelopes at +/- 2e-7 radians; bracket rays +/- 2e-4 radians retain the unchanged pointwise error budget. Pointwise tangent error is recorded separately."
+}

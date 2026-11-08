@@ -159,6 +159,7 @@ function setBusy(busy) {
     for (const input of document.querySelectorAll('fieldset input,fieldset textarea,fieldset button')) input.disabled = busy;
     if ($('transport').value === 'spectral') for (const id of ['sun','resolution','seams','volumeSize','sceneDepth']) $(id).disabled = true;
     $('reporthd').disabled = busy || !hdState?.renderer;
+    $('hdSun').disabled=busy||$('transport').value==='spectral';
 }
 function sceneDepth(u) {
     const value = $('sceneDepth').value;
@@ -319,6 +320,15 @@ async function getHdSolarLut(model) {
         const result = { lut, build }; persistentSolarLuts.set(key, result); return { ...result, reused: false };
     } catch (error) { lut.dispose(); throw error; }
 }
+let publicSkyDevice=null;
+async function getPublicSkyDevice(){
+    if(publicSkyDevice)return publicSkyDevice;
+    const adapter=await navigator.gpu?.requestAdapter();if(!adapter)throw new Error('WebGPU adapter required');
+    const device=await adapter.requestDevice();publicSkyDevice=device;
+    void device.lost.then(()=>{if(publicSkyDevice===device)publicSkyDevice=null;});
+    return device;
+}
+window.addEventListener('pagehide',()=>publicSkyDevice?.destroy(),{once:true});
 async function renderHD() {
     setBusy(true); $('hdSection').hidden = false;
     hdState?.renderer?.dispose(); hdState = null;
@@ -330,13 +340,14 @@ async function renderHD() {
         const solarDisk = projectedSolarDisk(camera,s.model.sun,s.spectral?.solarAngularRadius ?? 0.00465,width,height);
         const framing = { horizontalFovDegrees: 360/Math.PI*Math.atan(camera.halfWidth), verticalFovDegrees:360/Math.PI*Math.atan(camera.halfHeight), solarDisk };
         $('hdStatus').textContent = 'Preparation des ressources GPU...'; await yieldUI();
-        const solar = await getHdSolarLut(s.model), quality = Number($('skyLutQuality').value);
+        const solar = s.spectral ? {lut:null,build:{implementation:'public WebGPU solar columns'},reused:false} : await getHdSolarLut(s.model), quality = Number($('skyLutQuality').value);
+        const device=s.spectral?await getPublicSkyDevice():gpu.device;
         $('hdStatus').textContent = 'Compilation et construction de la Sky-View LUT...'; await yieldUI();
         const setupStart = performance.now();
-        renderer = await GpuSkyView.create(gpu.device, $('hdSky'), s.model, camera, solar.lut, { width: quality, hemisphereRows: quality / 4, samples: quality === 256 ? 64 : 32, spectral: s.spectral });
+        renderer = await GpuSkyView.create(device, $('hdSky'), s.model, camera, solar.lut, { width: quality, hemisphereRows: quality / 4, samples: quality === 256 ? 64 : 32, spectral: s.spectral });
         renderer.resize(width, height); renderer.writeCamera(camera, Number($('exposure').value), $('hdSun').checked);
         const skyBuild = await renderer.build();
-        renderer.draw(); await gpu.device.queue.onSubmittedWorkDone();
+        renderer.draw(); await device.queue.onSubmittedWorkDone();
         const display = [];
         for (let i = 0; i < 3; i++) display.push(await renderer.measureDisplay());
         $('hdStatus').textContent = 'Verification sur des rayons independants de la grille HD...'; await yieldUI();
@@ -349,7 +360,7 @@ async function renderHD() {
             setupAndValidationWallMs: performance.now() - setupStart, validation,
             note: 'Le temps d affichage seul reutilise la Sky-View LUT. Un changement de position ou de soleil exige sa reconstruction. Validation hors boucle; disque solaire natif et globe uni exclus du comparatif numerique.' };
         hdState = { renderer, report, baseCamera: camera, animation: null };
-        $('hdCaption').textContent = `${width} x ${height} pixels calcules sur GPU; Sky-View ${skyBuild.width} x ${skyBuild.height}. Soleil calcule par pixel. Globe uni, sans nuages.${s.spectral ? ' Transport spectral physique, ' + s.spectral.bins.length + ' longueurs d onde. Hypotheses de poussiere experimentales.' : ''}`;
+        $('hdCaption').textContent = `${width} x ${height} pixels calcules sur GPU; Sky-View ${skyBuild.width} x ${skyBuild.height}. ${s.spectral ? 'Radiance atmospherique seule, sans disque solaire ni couleur de sol.' : 'Soleil calcule par pixel. Globe uni, sans nuages.'}${s.spectral ? ' API WebGPU publique, disque solaire et sol synthetique exclus. Transport spectral physique, ' + s.spectral.bins.length + ' longueurs d onde. Hypotheses de poussiere experimentales.' : ''}`;
         $('hdCaption').textContent += ` Champ horizontal ${framing.horizontalFovDegrees.toFixed(1)} degres; diametre solaire ${solarDisk ? solarDisk.widthPixels.toFixed(1) + ' pixels natifs (' + solarDisk.angularDiameterDegrees.toFixed(3) + ' degres)' : 'hors champ avant'}.`;
         $('hdStatus').textContent = JSON.stringify(report, null, 2);
         window.atmosphereHDResult = report;

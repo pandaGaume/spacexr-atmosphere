@@ -1,0 +1,358 @@
+{
+    "date": "2026-11-08",
+    "status": "passed locally; remote CI not executed in this session",
+    "browser": "157.0.8103.38",
+    "adapter": {
+        "vendor": "intel",
+        "architecture": "xe-lpg"
+    },
+    "deviceLimits": {
+        "maxTextureDimension2D": 8192,
+        "maxTextureDimension3D": 2048,
+        "maxStorageBufferBindingSize": 134217728
+    },
+    "webgpuEntrySha256": "b487853eb859854fadd19406ad77fa70e70d614c6c335f0449b9b5504193c4ae",
+    "quality": {
+        "width": 64,
+        "hemisphereRows": 64,
+        "viewSteps": 256,
+        "solarSteps": 192,
+        "solarSize": [64, 32, 32],
+        "radianceFormat": "rgba16float",
+        "solarFormat": "rgba32float"
+    },
+    "tolerances": {
+        "status": "pre-measurement acceptance budget, version 1",
+        "rationale": "Absolute scene-linear radiance budget is 0.002 reference-solar-normalized units. Spectral transmittance budget is 0.002. Near-zero signals use absolute error only. Geometry budget is 0.01 m locally, 1 m at orbital distances. These are numerical integration budgets, not observational calibration.",
+        "radianceAbsolute": 0.002,
+        "radianceRelative": 0.05,
+        "signalFloor": 0.04,
+        "transmittanceAbsolute": 0.002,
+        "referenceConvergence": 0.0005,
+        "altitudeMeters": 0.01,
+        "intersectionMeters": 1,
+        "directionRadians": 2e-7,
+        "tangentRationale": "A float32 direction normalized in a shader has an angular uncertainty. Exact tangent cases use independent CPU radiance envelopes at +/- 2e-7 radians; bracket rays +/- 2e-4 radians retain the unchanged pointwise error budget. Pointwise tangent error is recorded separately."
+    },
+    "summary": {
+        "views": 56,
+        "rays": 392,
+        "maxRadianceError": 0.0013149201776662886,
+        "maxSolarError": 0.0018858520142921997,
+        "maxAltitudeErrorMeters": 0.1220703125,
+        "maxIntersectionErrorMeters": 0.5826423107646406
+    },
+    "solarProbe": "First wavelength triple; scene-linear radiance probes integrate all 24 or 48 wavelength bins.",
+    "tangentMetric": "Acceptance error is distance outside the documented CPU angular envelope. Raw central-direction error remains in the full local report.",
+    "cases": [
+        {
+            "scenario": "one-layer",
+            "heightMeters": 2000,
+            "latitudeRadians": 0,
+            "layers": 1,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0005593145546973349,
+            "maximumSolarError": 3.833753836790521e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0002384185791015625
+        },
+        {
+            "scenario": "profile-shapes",
+            "heightMeters": 12000,
+            "latitudeRadians": 0,
+            "layers": 3,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0001858119894498772,
+            "maximumSolarError": 0.000890495488391374,
+            "solarReferenceSteps": 3072,
+            "altitudeErrorMeters": 0.00095367431640625
+        },
+        {
+            "scenario": "profile-shapes",
+            "heightMeters": 20500,
+            "latitudeRadians": 0,
+            "layers": 3,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0005257629984266807,
+            "maximumSolarError": 0.001170333232302978,
+            "solarReferenceSteps": 1536,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 0,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 6.973743268742782e-5,
+            "maximumSolarError": 4.551581270717531e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 1,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 6.336918545438164e-5,
+            "maximumSolarError": 4.566819588658344e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 4.7497451305389404e-8
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 100,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 6.599381987681952e-5,
+            "maximumSolarError": 4.525445273884099e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 8.940696716308594e-6
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 2000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0005593145546973349,
+            "maximumSolarError": 3.833753836790521e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0002384185791015625
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 10000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0006113265712974492,
+            "maximumSolarError": 1.5981065667025618e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.00095367431640625
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 99999,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0010141084266131473,
+            "maximumSolarError": 2.915038765927136e-8,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.007080078125
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 100000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0010127031333757724,
+            "maximumSolarError": 2.882000493809045e-8,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.00762939453125
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 100001,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.001012967287835717,
+            "maximumSolarError": 2.8489668957298875e-8,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0081787109375
+        },
+        {
+            "scenario": "earth-day",
+            "heightMeters": 1000000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0013149201776662886,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.1220703125
+        },
+        {
+            "scenario": "earth-north",
+            "heightMeters": 1,
+            "latitudeRadians": 1.5707963267948966,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 3.3423001098577265e-5,
+            "maximumSolarError": 3.7578192304099645e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 1.6391277313232422e-7
+        },
+        {
+            "scenario": "earth-north",
+            "heightMeters": 2000,
+            "latitudeRadians": 1.5707963267948966,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0003906358435647045,
+            "maximumSolarError": 3.0660541589400125e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "earth-south",
+            "heightMeters": 1,
+            "latitudeRadians": -1.5707963267948966,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 3.3423001098577265e-5,
+            "maximumSolarError": 3.7578192304099645e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 1.6391277313232422e-7
+        },
+        {
+            "scenario": "earth-midlatitude",
+            "heightMeters": 1,
+            "latitudeRadians": 0.7853981633974483,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 3.23696248511543e-5,
+            "maximumSolarError": 3.745741389926671e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 6.891787052154541e-8
+        },
+        {
+            "scenario": "earth-midlatitude",
+            "heightMeters": 10000,
+            "latitudeRadians": 0.7853981633974483,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 9.217228176481435e-5,
+            "maximumSolarError": 1.1909865744619275e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.00095367431640625
+        },
+        {
+            "scenario": "earth-midlatitude",
+            "heightMeters": 1000000,
+            "latitudeRadians": 0.7853981633974483,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0001424823124031374,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.1220703125
+        },
+        {
+            "scenario": "mars-dust",
+            "heightMeters": 1,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0012915196537903184,
+            "maximumSolarError": 0.0018858520142921997,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 4.7497451305389404e-8
+        },
+        {
+            "scenario": "mars-dust",
+            "heightMeters": 10000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0001937485182302856,
+            "maximumSolarError": 1.690655151032061e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.00095367431640625
+        },
+        {
+            "scenario": "mars-dust",
+            "heightMeters": 150000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.00017666769100837263,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "earth-terminator",
+            "heightMeters": 1,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.00028444212927808063,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 4.7497451305389404e-8
+        },
+        {
+            "scenario": "earth-terminator",
+            "heightMeters": 60000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.00033095652632884887,
+            "maximumSolarError": 2.7557949122680725e-7,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "earth-night",
+            "heightMeters": 1,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 4.7497451305389404e-8
+        },
+        {
+            "scenario": "earth-night",
+            "heightMeters": 150000,
+            "latitudeRadians": 0,
+            "layers": 2,
+            "wavelengths": 24,
+            "maximumRadianceError": 0,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0152587890625
+        },
+        {
+            "scenario": "three-layers",
+            "heightMeters": 2000,
+            "latitudeRadians": 0,
+            "layers": 3,
+            "wavelengths": 24,
+            "maximumRadianceError": 0.0005593145546973627,
+            "maximumSolarError": 3.821832907824341e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0002384185791015625
+        },
+        {
+            "scenario": "four-layers-band",
+            "heightMeters": 2000,
+            "latitudeRadians": 0.7853981633974483,
+            "layers": 4,
+            "wavelengths": 48,
+            "maximumRadianceError": 3.7107866453070515e-5,
+            "maximumSolarError": 3.15748521918513e-5,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0
+        },
+        {
+            "scenario": "zero-density",
+            "heightMeters": 2000,
+            "latitudeRadians": 0,
+            "layers": 1,
+            "wavelengths": 24,
+            "maximumRadianceError": 0,
+            "maximumSolarError": 0,
+            "solarReferenceSteps": 768,
+            "altitudeErrorMeters": 0.0002384185791015625
+        }
+    ],
+    "limitations": "Representative single-scattering implementation agreement on this adapter and quality. No observational calibration or continuous-motion XR performance qualification."
+}

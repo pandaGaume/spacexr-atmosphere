@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <meta charset="utf-8" />
+    <script type="importmap">
+        {
+            "imports": {
+                "@spacexr/atmosphere": "/node_modules/@spacexr/atmosphere/dist/index.js",
+                "@spacexr/atmosphere/webgpu": "/node_modules/@spacexr/atmosphere/dist/webgpu.js",
+                "@spacexr/geodesy": "/node_modules/@spacexr/geodesy/dist/index.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import { validate } from "./validate.js";
+        window.validation = validate();
+    </script>
+</html>

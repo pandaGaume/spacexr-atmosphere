@@ -1,0 +1,11 @@
+{
+    "name": "atmosphere-sky-consumer",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "node serve.mjs"
+    },
+    "dependencies": {
+        "@spacexr/atmosphere": "file:../../spacexr-atmosphere-0.1.0.tgz"
+    }
+}

@@ -9,6 +9,7 @@ export default defineConfig({
         layers: "src/layers.ts",
         composition: "src/composition.ts",
         presets: "src/presets.ts",
+        webgpu: "webgpu/index.ts",
     },
     format: ["esm"],
     target: "es2022",

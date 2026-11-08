@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8" /><title>Injected-device atmosphere sky</title>
+    <style>
+        body {
+            margin: 0;
+            background: #080c15;
+            color: #eef;
+            font: 16px system-ui;
+        }
+        canvas {
+            width: 100%;
+            height: 80vh;
+            display: block;
+        }
+        p {
+            padding: 0 1rem;
+        }
+    </style>
+    <canvas width="960" height="540"></canvas>
+    <p id="status">Preparing WebGPU. Drag to rotate; use W/S to change altitude.</p>
+    <script type="importmap">
+        {
+            "imports": {
+                "@spacexr/atmosphere": "/node_modules/@spacexr/atmosphere/dist/index.js",
+                "@spacexr/atmosphere/webgpu": "/node_modules/@spacexr/atmosphere/dist/webgpu.js",
+                "@spacexr/geodesy": "/node_modules/@spacexr/geodesy/dist/index.js"
+            }
+        }
+    </script>
+    <script type="module" src="./main.js"></script>
+</html>

@@ -8,7 +8,8 @@ const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; cha
 const server = http.createServer(async (request, response) => {
     try {
         const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-        const root = pathname.startsWith('/dist/') || pathname.startsWith('/node_modules/@spacexr/geodesy/dist/') ? packageRoot : labRoot;
+        if(pathname==='/favicon.ico'){response.writeHead(204).end();return;}
+        const root = pathname.startsWith('/sky-consumer/') ? path.join(packageRoot,'examples') : pathname.startsWith('/dist/') || pathname.startsWith('/node_modules/@spacexr/geodesy/dist/') ? packageRoot : labRoot;
         const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
         if (!file.startsWith(root + path.sep)) { response.writeHead(403).end(); return; }
         const content = await readFile(file);

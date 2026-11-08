@@ -16,12 +16,13 @@ The laboratory opens at http://127.0.0.1:8097/ by default. The original SpaceXR 
 ## Architecture
 
 - `src`: strict TypeScript numerical core, ESM, no DOM, WebGPU or Babylon dependency.
+- `webgpu`: separate injected-device spectral sky renderer, typed API and embedded shader build.
 - `tests`: package, layered-interface and composition interoperability tests.
 - `examples/atmosphere-lab`: the complete migrated WebGPU laboratory, including original octree, LUT, camera-volume and spectral experiments, shaders, recorded measurements and images.
 - `docs/api`: generated TypeDoc output, excluded from Git.
 - `dist`: ESM and declaration outputs, excluded from Git.
 
-Exports: package root, `geometry`, `model`, `scattering`, `spectrum`, `layers`, `composition`, `presets`, and `package.json`. Root `model.Atmosphere` preserves the historical two-profile API for regression comparisons; the spectral laboratory consumes the structural `IAtmosphere` layer contract.
+Exports: package root, `geometry`, `model`, `scattering`, `spectrum`, `layers`, `composition`, `presets`, `webgpu`, and `package.json`. Root `model.Atmosphere` preserves the historical two-profile API for regression comparisons; the spectral laboratory consumes the structural `IAtmosphere` layer contract.
 
 ## Layered atmosphere
 
@@ -80,3 +81,27 @@ Spectral single scattering uses Planck or an experimental Gaussian source, molec
 Historical images and timings remain under the laboratory's `outputs` directory. They predate parts of this migration and do not measure the new general layered pipeline. Sky-View rebuild cost and cached HD display cost must be reported separately. The layer GPU ABI packs 304 bytes per wavelength triple and retains separate Mie radiance per atmospheric layer; it must not be mixed with the historical 112-byte ABI.
 
 See [migration provenance](docs/MIGRATION.md), [layer design](docs/LAYERS.md), the laboratory's [spectral notes](examples/atmosphere-lab/SPECTRAL.md), and the [integration brief](docs/INTEGRATION.md), in French, on what keeps the renderer inside the laboratory.
+
+## WebGPU sky rendering
+
+`@spacexr/atmosphere/webgpu` exports `AtmosphereSky`, `atmosphereSkyWgsl` and typed camera, quality and binding contracts. It borrows the host's device and encoder; the host owns submission, canvas, drawing and display transforms. Use one instance per view or XR eye. The CPU root entry remains free of DOM and WebGPU runtime requirements.
+
+```ts
+import { AtmosphereSky } from "@spacexr/atmosphere/webgpu";
+
+const sky = await AtmosphereSky.create(device, atmosphere);
+sky.update(camera);
+const encoder = device.createCommandEncoder();
+const ready = sky.encode(encoder);
+if (ready) {
+    const { layout, group } = sky.bindings();
+    // Use layout in the host pipeline; bind group 0 in a later render pass.
+}
+device.queue.submit([encoder.finish()]);
+// Repeat encode on submitted encoders until ready, then draw as needed.
+// Call sky.dispose() after the last submission using this instance.
+```
+
+Construction is progressive and restarts the view tasks after translation. Rotation reuses the full-sky cache. Changing atmosphere, sunlight, source spectrum or quality requires a replacement instance. The WGSL reader returns scene-linear spectral sky radiance without an invented ground color, stellar disk, exposure or tone mapping. Terrain aerial perspective belongs to the next milestone.
+
+See the [integration contract](docs/WEBGPU-INTEGRATION.md), [precision protocol](docs/WEBGPU-PRECISION.md) and [standalone consumer](examples/sky-consumer/README.md). Run `npm run test:webgpu` for the packed-consumer Chrome suite. Reconstruction cost and XR frame rates are not qualified by numerical agreement.
